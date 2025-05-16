@@ -1,7 +1,26 @@
 import React from 'react';
 
 const Stats = () => {
-  return <section className='stats'>Stats</section>;
+  return (
+    <section className='stats'>
+      <section className='stat'>
+        <span className='stat__number'>0</span>
+        <h2 className='second-heading'>Words</h2>
+      </section>
+      <section className='stat'>
+        <span className='stat__number'>0</span>
+        <h2 className='second-heading'>Characters</h2>
+      </section>
+      <section className='stat'>
+        <span className='stat__number'>280</span>
+        <h2 className='second-heading'>Instagramm</h2>
+      </section>
+      <section className='stat'>
+        <span className='stat__number'>2200</span>
+        <h2 className='second-heading'>Facebook</h2>
+      </section>
+    </section>
+  );
 };
 
 export default Stats;
