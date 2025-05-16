@@ -1,12 +1,15 @@
-import React from 'react';
-
-const Stats = () => {
+const Stats = ({
+  numberOfCharacters,
+  numberOfWords,
+  instagrammCharactersLeft,
+  facebookCharactersLeft,
+}) => {
   return (
     <section className='stats'>
-      <Stat number={0} label='Words' />
-      <Stat number={0} label='Characters' />
-      <Stat number={280} label='Instagramm' />
-      <Stat number={2200} label='Facebook' />
+      <Stat number={numberOfWords} label='Words' />
+      <Stat number={numberOfCharacters} label='Characters' />
+      <Stat number={instagrammCharactersLeft} label='Instagramm' />
+      <Stat number={facebookCharactersLeft} label='Facebook' />
     </section>
   );
 };
