@@ -3,24 +3,21 @@ import React from 'react';
 const Stats = () => {
   return (
     <section className='stats'>
-      <section className='stat'>
-        <span className='stat__number'>0</span>
-        <h2 className='second-heading'>Words</h2>
-      </section>
-      <section className='stat'>
-        <span className='stat__number'>0</span>
-        <h2 className='second-heading'>Characters</h2>
-      </section>
-      <section className='stat'>
-        <span className='stat__number'>280</span>
-        <h2 className='second-heading'>Instagramm</h2>
-      </section>
-      <section className='stat'>
-        <span className='stat__number'>2200</span>
-        <h2 className='second-heading'>Facebook</h2>
-      </section>
+      <Stat number={0} label='Words' />
+      <Stat number={0} label='Characters' />
+      <Stat number={280} label='Instagramm' />
+      <Stat number={2200} label='Facebook' />
     </section>
   );
 };
 
 export default Stats;
+
+const Stat = ({ number, label }) => {
+  return (
+    <section className='stat'>
+      <span className='stat__number'>{number}</span>
+      <h2 className='second-heading'>{label}</h2>
+    </section>
+  );
+};
