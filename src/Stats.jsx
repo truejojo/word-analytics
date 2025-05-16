@@ -1,9 +1,11 @@
-const Stats = ({
-  numberOfCharacters,
-  numberOfWords,
-  instagrammCharactersLeft,
-  facebookCharactersLeft,
-}) => {
+const Stats = ({ stats }) => {
+  const {
+    numberOfCharacters,
+    numberOfWords,
+    instagrammCharactersLeft,
+    facebookCharactersLeft,
+  } = stats;
+
   return (
     <section className='stats'>
       <Stat number={numberOfWords} label='Words' />

@@ -14,15 +14,17 @@ const Content = () => {
     MAX_INSTAGRAM_CHARACTERS - numberOfCharacters;
   const facebookCharactersLeft = MAX_FACEBOOK_CHARACTERS - numberOfCharacters;
 
+  const stats = {
+    numberOfCharacters,
+    numberOfWords,
+    instagrammCharactersLeft,
+    facebookCharactersLeft,
+  };
+
   return (
     <main className='container'>
       <Textarea text={text} setText={setText} />
-      <Stats
-        numberOfCharacters={numberOfCharacters}
-        numberOfWords={numberOfWords}
-        instagrammCharactersLeft={instagrammCharactersLeft}
-        facebookCharactersLeft={facebookCharactersLeft}
-      />
+      <Stats stats={stats} />
     </main>
   );
 };
